@@ -1,0 +1,41 @@
+/* pages/Teams/EditTeam/index.wxss */
+.avatar-btn {
+  padding: 0;
+  margin: 0;
+  width: 100rpx !important;
+  float: right;
+}
+
+.avatar-image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #eee;
+  float: right;
+}
+
+.radio-items {
+  margin-left: 10px;
+}
+
+.submit-btn button {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.background-btn {
+  padding: 0;
+  margin: 0;
+  width: auto !important;
+}
+
+.background-image {
+  background-color: #eee;
+  width: 150px;
+  height: 112px;
+  float: right;
+}
+
+.weui-tiptips {
+  display: block;
+}

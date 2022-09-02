@@ -1,0 +1,1 @@
+"D:\Tencent\微信web开发者工具\cli.bat" cloud functions deploy --e cloud1-0g9ocwgo91faee3e --n quickstartFunctions --r --project "D:\WeChatProjects\yulin" --report_first --report

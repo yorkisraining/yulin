@@ -1,0 +1,22 @@
+<!--pages/Home/UserInfo/index.wxml 我的-->
+<view class="home-box">
+  <view class="home-breif-box">
+    <view>
+      <view class="breif-name">{{userInfo.userName}}</view>
+      <view class="breif-desc">{{userInfo.desc || '还有没介绍，快去编辑吧'}}</view>
+    </view>
+    <button class="breif-avatar-btn" open-type="chooseAvatar" bindchooseavatar="getUserAvatar">
+      <image class="breif-avatar" mode="aspectFill" src="{{userInfo.avatarUrl}}" bind="getUserAvatar"></image>
+    </button>
+    
+  </view>
+
+  <view class="home-menu-box">
+    <mp-cells ext-class="home-menu-cells">
+      <mp-cell value="个人信息" link="true" bindtap="navigateTo" data-url="UserInfo"></mp-cell>
+      <mp-cell value="账号安全" link="true"></mp-cell>
+      <mp-cell value="关于我们" link="true"></mp-cell>
+      <mp-cell value="设置" link="true"></mp-cell>
+    </mp-cells>
+  </view>
+</view>

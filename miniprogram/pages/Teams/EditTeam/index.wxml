@@ -1,0 +1,42 @@
+<view>
+  <mp-form class="team-form-box" id="form" rules="{{rules}}" models="{{formData}}">
+    <mp-cells class="form-cells">
+      <mp-cell class="form_item" prop="avatarUrl" title="头像">
+        <image bindtap="getTeamAvatar" class="avatar-image" mode="aspectFill" src="{{formData.avatarUrl}}"></image>
+      </mp-cell>
+      <mp-cell class="form_item" prop="name" title="名称">
+        <input value="{{formData.name}}" data-field="name" class="weui-input" bindinput="changeFormData" />
+      </mp-cell>
+      <mp-cell class="form_item" prop="desc" title="简介">
+        <textarea value="{{formData.desc}}" data-field="userDesc" class="weui-textarea" auto-height bindinput="changeFormData" />
+      </mp-cell>
+      <mp-cell class="form_item" prop="slogan" title="宣言">
+        <textarea value="{{formData.slogan}}" data-field="slogan" class="weui-textarea" auto-height bindinput="changeFormData" />
+      </mp-cell>
+      <mp-cell class="form_item" prop="backgroundUrl" title="背景">
+        <image bindtap="chooseBackground" class="background-image" mode="aspectFill" src="{{formData.backgroundUrl}}"></image>
+      </mp-cell>
+      <mp-cell class="form_item" prop="phone" title="联系方式">
+        <input value="{{formData.phone}}" data-field="phone" class="weui-input" bindinput="changeFormData" />
+      </mp-cell>
+      <mp-cell class="form_item" prop="isPublic" title="是否公开">
+        <radio-group bindchange="changeFormData">
+          <radio class="radio-items" value="true" checked="{{formData.isPublic == true}}" />是
+          <radio class="radio-items" value="false" checked="{{formData.isPublic == false}}" />否
+        </radio-group>
+      </mp-cell>
+      <mp-cell class="form_item" prop="isConfirm" title="认证加入">
+        <radio-group bindchange="changeFormData">
+          <radio class="radio-items" value="true" checked="{{formData.isConfirm == true}}" />开启
+          <radio class="radio-items" value="false" checked="{{formData.isConfirm == false}}" />关闭
+        </radio-group>
+      </mp-cell>
+    </mp-cells>
+    <!--提交按钮-->
+    <view class="submit-btn">
+      <button type="primary" bindtap="saveForm">确定</button>
+    </view>
+  </mp-form>
+
+  <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+</view>

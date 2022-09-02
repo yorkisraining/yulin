@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/Teams/index",
+    "pages/Activity/index",
+    "pages/Activity/EditActivity/index",
+    "pages/Activity/Detail/index",
+    "pages/Teams/Detail/index",
+    "pages/Teams/EditTeam/index",
+    "pages/Teams/Challenge/index",
+    "pages/Home/index",
+    "pages/Home/UserInfo/index",
+    "pages/Mall/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "羽林",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "color": "#181818",
+    "selectedColor": "#45C4B0",
+    "backgroundColor": "#F8F8F8",
+    "list": [{
+      "pagePath": "pages/Teams/index",
+      "text": "战队",
+      "iconPath": "images/icons/icon_teams.png",
+      "selectedIconPath": "images/icons/icon_teams-select.png"
+    }, {
+      "pagePath": "pages/Activity/index",
+      "text": "活动",
+      "iconPath": "images/icons/icon_activity.png",
+      "selectedIconPath": "images/icons/icon_activity-select.png"
+    }, {
+      "pagePath": "pages/Mall/index",
+      "text": "商城",
+      "iconPath": "images/icons/icon_mall.png",
+      "selectedIconPath": "images/icons/icon_mall-select.png"
+    }, {
+      "pagePath": "pages/Home/index",
+      "text": "我的",
+      "iconPath": "images/icons/icon_home.png",
+      "selectedIconPath": "images/icons/icon_home-select.png"
+    }]
+  },
+  "requiredPrivateInfos": [
+    "getLocation"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置将用于小程序位置接口展示"
+    }
+  }
+}

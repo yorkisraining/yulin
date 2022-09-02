@@ -1,0 +1,32 @@
+<!--pages/Activity/EditActivity/index.wxml-->
+<view>
+  <mp-form class="activity-form-box" id="form" rules="{{rules}}" models="{{formData}}">
+    <mp-cells class="form-cells">
+      <mp-cell class="form_item" prop="name" title="活动名称">
+        <input value="{{formData.name}}" data-field="name" class="weui-input" bindinput="changeFormData" />
+      </mp-cell>
+      <mp-cell class="form_item" prop="startTime" title="活动时间">
+        <picker mode="date" value="{{formData.startTime}}" data-field="startTime" bindchange="changeFormData">
+          <view class="picker">
+            {{formData.startTime}}
+          </view>
+        </picker>
+      </mp-cell>
+      <mp-cell class="form_item" prop="address" title="活动地点">
+        <input value="{{formData.address}}" data-field="address" class="weui-input" bindinput="changeFormData" />
+      </mp-cell>
+      <mp-cell class="form_item" prop="desc" title="活动说明">
+        <textarea value="{{formData.desc}}" data-field="desc" class="weui-textarea" auto-height bindinput="changeFormData" />
+      </mp-cell>
+      <mp-cell class="form_item" prop="backgroundUrl" title="宣传图片">
+        <image bindtap="chooseBackground" class="background-image" mode="aspectFill" src="{{formData.backgroundUrl}}"></image>
+      </mp-cell>
+    </mp-cells>
+    <!--提交按钮-->
+    <view class="submit-btn">
+      <button type="primary" bindtap="saveForm">确定</button>
+    </view>
+  </mp-form>
+
+  <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+</view>

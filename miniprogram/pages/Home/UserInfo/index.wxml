@@ -1,0 +1,25 @@
+<!--pages/UserInfo/index.wxml 修改个人信息-->
+<view>
+  <mp-form class="userinfo-form-box" id="form">
+    <mp-cells class="form-cells">
+      <mp-cell class="form_item" prop="userName">
+        <button class="avatar-btn" open-type="chooseAvatar" bindchooseavatar="getUserAvatar">
+          <image class="avatar-image" mode="aspectFill" src="{{avatarUrl}}" bind="getUserAvatar"></image>
+        </button>
+      </mp-cell>
+      <mp-cell class="form_item" prop="userName" title="昵称">
+        <input model:value="{{userName}}" data-field="userName" class="weui-input" />
+      </mp-cell>
+      <mp-cell class="form_item" prop="desc" title="个人简介">
+        <input model:value="{{desc}}" data-field="desc" class="weui-input" />
+      </mp-cell>
+      <mp-cell class="form_item" prop="phone" title="手机号">
+        <input model:value="{{phone}}" data-field="phone" class="weui-input" />
+      </mp-cell>
+    </mp-cells>
+    <!--提交按钮-->
+    <view class="submit-btn">
+      <button type="primary" bindtap="saveForm">确定</button>
+    </view>
+  </mp-form>
+</view>
