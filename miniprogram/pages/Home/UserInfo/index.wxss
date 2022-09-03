@@ -5,8 +5,11 @@
 
 .submit-btn button {
   margin-top: 16px;
+<<<<<<< HEAD
   background-color: #45C4AF;
   width: 90%;
+=======
+>>>>>>> 821004816139b8e2c38bc7d73cb8cb1b16316ce6
 }
 
 .avatar-btn {

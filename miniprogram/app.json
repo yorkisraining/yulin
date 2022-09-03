@@ -14,9 +14,15 @@
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
+<<<<<<< HEAD
     "navigationBarBackgroundColor": "#13678B",
     "navigationBarTitleText": "羽林",
     "navigationBarTextStyle": "white"
+=======
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "羽林",
+    "navigationBarTextStyle": "black"
+>>>>>>> 821004816139b8e2c38bc7d73cb8cb1b16316ce6
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2",

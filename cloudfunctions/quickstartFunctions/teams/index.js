@@ -245,7 +245,11 @@ exports.getTeamPage = async (event) => {
         .limit(5)
         .get()
         .then(res => {
+<<<<<<< HEAD
           returnMsg.list[i].activityInfoList = res.data;
+=======
+          returnMsg.list[i].activityList = res.data;
+>>>>>>> 821004816139b8e2c38bc7d73cb8cb1b16316ce6
         })
     }
 

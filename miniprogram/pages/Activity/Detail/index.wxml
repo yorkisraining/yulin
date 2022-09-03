@@ -1,5 +1,9 @@
 <!--pages/Activity/Detail/index.wxml-->
+<<<<<<< HEAD
 <scroll-view scroll-y="true" class="act-detail-box">
+=======
+<view class="act-detail-box">
+>>>>>>> 821004816139b8e2c38bc7d73cb8cb1b16316ce6
 
   <view class="act-detail-brief">
     <image src="{{actInfo.backgroundUrl}}" class="brief-img" mode="aspectFill"></image>
@@ -19,6 +23,7 @@
     </view>
     <view class="msg-items">
       <image class="msg-items-icon" src="../../../images/icons/icon_notice-w.png"></image>
+<<<<<<< HEAD
       <view class="msg-items-detail">须知：退款政策/防疫说明 <image class="team-icon" src="../../../images/icons/icon_right-arrow.png"></image></view>
     </view>
   </view>
@@ -28,6 +33,12 @@
     <view class="act-detail-msg">{{teamInfo.desc || '这是一个活动详情'}}</view>
   </view>
 
+=======
+      <view class="msg-items-detail">说明：{{actInfo.desc}}</view>
+    </view>
+  </view>
+
+>>>>>>> 821004816139b8e2c38bc7d73cb8cb1b16316ce6
   <view class="act-team" bindtap="toTeamDetail">
     <view class="act-title">-所在战队-</view>
     <view class="act-team-item">
@@ -43,4 +54,8 @@
     </view>
   </view>
 
+<<<<<<< HEAD
 </scroll-view>
+=======
+</view>
+>>>>>>> 821004816139b8e2c38bc7d73cb8cb1b16316ce6

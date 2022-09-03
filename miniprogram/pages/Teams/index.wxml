@@ -4,7 +4,11 @@
   <view wx:for="{{tabsList}}" wx:key="id" class="tab-item {{activeTab==item.id ? 'cur' : ''}}" data-id="{{item.id}}" bindtap="swichNav">{{item.title}}</view>
 </view>
 
+<<<<<<< HEAD
 <view class="team-items {{!teamItem.activityList.length ? 'no-act' : ''}}" wx:for="{{teamsList}}" wx:for-item="teamItem" wx:key="id" catchtap="toTeamDetail" data-id="{{teamItem.id}}">
+=======
+<view class="team-items" wx:for="{{teamsList}}" wx:for-item="teamItem" wx:key="id" bindtap="toTeamDetail" data-id="{{teamItem.id}}">
+>>>>>>> 821004816139b8e2c38bc7d73cb8cb1b16316ce6
   <image class="team-bg" src="{{teamItem.backgroundUrl}}"></image>
   <view class="team-items-flex">
     <image class="team-avatar" src="{{teamItem.avatarUrl}}"></image>
@@ -13,6 +17,7 @@
       <view class="team-slogan" wx:if="teamItem.slogan">{{teamItem.slogan}}</view>
     </view>
     <view class="team-btn-groups">
+<<<<<<< HEAD
       <wxs src="../com.wxs" module="tools" />
       <button catchtap="operations" data-type="add" wx:if="{{tools.calcTeamListBtn(teamItem.role, 2)}}" data-id="{{teamItem.id}}" data-index="{{index}}">加入战队</button>
     </view>
@@ -32,6 +37,13 @@
       </view>
     </view>
   </scroll-view>
+=======
+        <wxs src="../com.wxs" module="tools" />
+        <button catchtap="operations" data-type="add" wx:if="{{tools.calcTeamListBtn(teamItem.role, 2)}}" data-id="{{teamItem.id}}" data-index="{{index}}">加入战队</button>
+      </view>
+  </view>
+  <view class="team-medal"></view>
+>>>>>>> 821004816139b8e2c38bc7d73cb8cb1b16316ce6
   <view class="team-score">积分：{{teamItem.score || 0}}</view>
 </view>
 
