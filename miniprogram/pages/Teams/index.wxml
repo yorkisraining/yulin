@@ -1,0 +1,39 @@
+<!--pages/Teams/index.wxml 战队首页-->
+
+<view class="swiper-tab">
+  <view wx:for="{{tabsList}}" wx:key="id" class="tab-item {{activeTab==item.id ? 'cur' : ''}}" data-id="{{item.id}}" bindtap="swichNav">{{item.title}}</view>
+</view>
+
+<view class="team-items {{!teamItem.activityList.length ? 'no-act' : ''}}" wx:for="{{teamsList}}" wx:for-item="teamItem" wx:key="id" catchtap="toTeamDetail" data-id="{{teamItem.id}}">
+  <image class="team-bg" src="{{teamItem.backgroundUrl}}"></image>
+  <view class="team-items-flex">
+    <image class="team-avatar" src="{{teamItem.avatarUrl}}"></image>
+    <view style="width: calc(100% - 64px)">
+      <text class="team-name">{{teamItem.name}}</text>
+      <view class="team-slogan" wx:if="teamItem.slogan">{{teamItem.slogan}}</view>
+    </view>
+    <view class="team-btn-groups">
+      <wxs src="../com.wxs" module="tools" />
+      <button catchtap="operations" data-type="add" wx:if="{{tools.calcTeamListBtn(teamItem.role, 2)}}" data-id="{{teamItem.id}}" data-index="{{index}}">加入战队</button>
+    </view>
+  </view>
+
+  <scroll-view class="scroll-view_H" scroll-x="true">
+    <view class="act-items scroll-view-avt" wx:for="{{teamItem.activityInfoList}}" wx:for-item="actItem" wx:key="{{actItem.id}}" data-id="{{actItem.id}}" catchtap="toActDetail">
+      <image class="act-bg" src="{{actItem.backgroundUrl}}" mode="aspectFill"></image>
+      <view class="act-msg">
+        <view class="act-name">{{actItem.name}}</view>
+        <view class="act-time">
+          <image src="../../images/icons/icon_clock.png"></image>{{actItem.startTime}}
+        </view>
+        <view class="act-address">
+          <image src="../../images/icons/icon_address.png"></image>{{actItem.address}}
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="team-score">积分：{{teamItem.score || 0}}</view>
+</view>
+
+<image wx:if="{{showToTopBtn}}" class="scroll-btn" src="../../images/icon_scroll-top.png" bindtap="scrollToTop"></image>
+<image class="add-btn" src="../../images/icon_add.png" bindtap="createTeam"></image>

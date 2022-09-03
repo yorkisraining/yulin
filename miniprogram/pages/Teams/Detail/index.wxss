@@ -1,0 +1,182 @@
+/* pages/Teams/Detail/index.wxss */
+.team-box {
+  margin-bottom: 10px;
+  padding: 16px;
+  height: 200px;
+  position: relative;
+  color: #fff;
+}
+
+.team-desc-box {
+  padding: 16px;
+  margin: 0 10px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.breif-flex {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.team-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+
+.team-slogan {
+  margin-bottom: 10px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.team-avatar {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.team-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.team-btn-groups {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.team-btn-groups button {
+  height: 24px;
+  line-height: 24px;
+  width: auto !important;
+  padding: 0 10px;
+  background-color: #45C4AF;
+  font-size: 12px;
+  color: #fff;
+  font-weight: normal;
+  border-radius: 16px;
+}
+
+.team-btn-groups button:not([size=mini]) {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.team-btn-groups button:not([size=mini])+button {
+  margin-left: 10px;
+}
+
+.team-sun-nav {
+  display: flex;
+  height: 24px;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.team-sun-nav view {
+  padding: 0 10px;
+  transition: all .2s;
+}
+
+.team-sun-nav view.cur {
+  color: #13678B;
+  font-weight: bold;
+  transform: scale(1.2);
+}
+
+.team-desc-items {
+  margin-bottom: 16px;
+}
+
+.detail-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-user-box {
+  text-align: center;
+}
+
+.team-user-name {
+  width: 60px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.team-user-avatar {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 6px;
+  border-radius: 50%;
+}
+
+.desc-items-title {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.act-items {
+  display: flex;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.05);
+  margin-bottom: 16px;
+}
+
+.act-bg {
+  width: 100px;
+  height: 135px;
+  background-color: #eee;
+  border-radius: 6px 0 0 6px;
+  flex-shrink: 0;
+}
+
+.act-msg {
+  padding: 10px 16px;
+}
+
+.act-name {
+  font-size: 16px;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-bottom: 10px;
+}
+
+.act-time,
+.act-address {
+  color: #666;
+  display: flex;
+}
+
+.act-time image,
+.act-address image {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+}
+
+.team-activity-box {
+  margin: 0 16px;
+}

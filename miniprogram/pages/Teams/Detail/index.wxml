@@ -1,0 +1,57 @@
+<!--pages/Teams/Detail/index.wxml 战队详情-->
+<view class="detail-breif-box team-box">
+  <view class="breif-flex">
+    <image class="team-avatar" mode="aspectFill" src="{{teamInfo.avatarUrl}}"></image>
+    <view class="team-name">{{teamInfo.name}}</view>
+    <image class="team-bg" mode="aspectFill" src="{{teamInfo.backgroundUrl}}"></image>
+  </view>
+  <view class="team-slogan">宣言：{{teamInfo.slogan}}</view>
+  <view class="team-btn-groups">
+    <wxs src="../../com.wxs" module="tools" />
+    <button catchtap="operations" data-type="challenge" wx:if="{{tools.calcTeamListBtn(teamInfo.role, 0)}}" data-id="{{teamInfo.id}}">挑战</button>
+    <button catchtap="operations" data-type="edit" wx:if="{{tools.calcTeamListBtn(teamInfo.role, 1)}}" data-id="{{teamInfo.id}}">编辑信息</button>
+    <button catchtap="operations" data-type="addAct" wx:if="{{tools.calcTeamListBtn(teamInfo.role, 5)}}" data-id="{{teamInfo.id}}">创建活动</button>
+    <button catchtap="operations" data-type="add" wx:if="{{tools.calcTeamListBtn(teamInfo.role, 2)}}" data-id="{{teamInfo.id}}">加入战队</button>
+    <button catchtap="operations" data-type="quit" wx:if="{{tools.calcTeamListBtn(teamInfo.role, 3)}}" data-id="{{teamInfo.id}}" data-name="{{teamInfo.name}}" data-index="{{index}}">退出战队</button>
+    <button catchtap="operations" data-type="delete" wx:if="{{tools.calcTeamListBtn(teamInfo.role, 4)}}" data-id="{{teamInfo.id}}" data-name="{{teamInfo.name}}" data-index="{{index}}">解散战队</button>
+  </view>
+  <view class="team-medal-box"></view>
+</view>
+
+<view class="team-sun-nav">
+  <view wx:for="{{['简介', '活动']}}" wx:key="{{index}}" class="{{activeNav == index ? 'cur' : ''}}" data-index="{{index}}" bindtap="switchNav">{{item}}</view>
+</view>
+
+<view class="team-desc-box" wx:if="{{activeNav === 0}}">
+  <view class="team-desc-items">
+    <view class="desc-items-title">简介</view>
+    <view class="desc-items-detail">{{teamInfo.desc}}</view>
+  </view>
+  <view class="team-desc-items">
+    <view class="desc-items-title">成员</view>
+    <view class="desc-items-detail detail-flex" wx:if="userList.length">
+      <view class="team-user-box" wx:for="{{userList}}" wx:key="{{item.id}}">
+        <image class="team-user-avatar" mode="aspectFill" src="{{item.avatarUrl}}"></image>
+        <view class="team-user-name">{{item.userName}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="team-desc-items">
+    <view class="desc-items-title">勋章</view>
+  </view>
+</view>
+
+<view class="team-activity-box" wx:if="{{activeNav === 1}}">
+  <view class="act-items" wx:for="{{teamInfo.activityInfoList}}" wx:key="{{item.id}}" data-id="{{item.id}}" bindtap="toDetail">
+    <image class="act-bg" src="{{item.backgroundUrl}}" mode="aspectFill"></image>
+    <view class="act-msg">
+      <view class="act-name">{{item.name}}</view>
+      <view class="act-time">
+        <image src="../../../images/icons/icon_clock.png"></image>{{item.startTime}}
+      </view>
+      <view class="act-address">
+        <image src="../../../images/icons/icon_address.png"></image>{{item.address}}
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,25 @@
+/* pages/UserInfo/index.wxss */
+.userinfo-title {
+  padding-left: 16px;
+}
+
+.submit-btn button {
+  margin-top: 16px;
+  background-color: #45C4AF;
+  width: 90%;
+}
+
+.avatar-btn {
+  padding: 0;
+  margin: 0;
+  width: 100rpx !important;
+  float: right;
+}
+
+.avatar-image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #eee;
+  flex-shrink: 0;
+}

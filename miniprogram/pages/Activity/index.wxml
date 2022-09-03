@@ -1,0 +1,14 @@
+<view>
+  <mp-searchbar bindselectresult="selectResult" search="{{search}}"></mp-searchbar>
+</view>
+
+<view class="act-list-box">
+  <view class="act-items" wx:for="{{activityList}}" wx:key="{{item.id}}" data-id="{{item.id}}" bindtap="toDetail">
+    <image class="act-bg" src="{{item.backgroundUrl}}" mode="aspectFill"></image>
+    <view class="act-msg">
+      <view class="act-name">{{item.name}}</view>
+      <view class="act-time"><image src="../../images/icons/icon_clock.png"></image>{{item.startTime}}</view>
+      <view class="act-address"><image src="../../images/icons/icon_address.png"></image>{{item.address}}</view>
+    </view>
+  </view>
+</view>

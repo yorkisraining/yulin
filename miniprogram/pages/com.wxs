@@ -1,0 +1,41 @@
+var calcTeamListBtn = function (roles, val) {
+  if (!roles) { return false };
+  switch (val) {
+    case 0:
+      // 挑战
+      // 不是我的战队，并且我没有加入的才能挑战
+      if (roles.indexOf(0) == -1 && roles.indexOf(2) > -1) {
+        return true;
+      }
+      break;
+    case 1:
+      // 编辑
+      if (roles.indexOf(0) > -1) {
+        return true;
+      }
+      break;
+    case 2:
+      // 加入
+      if (roles.indexOf(2) > -1) {
+        return true;
+      }
+      break;
+    case 3:
+      // 退出
+      if (roles.indexOf(0) == -1 && roles.indexOf(1) > -1) {
+        return true;
+      }
+      break;
+    case 4:
+    case 5:
+      // 解散
+      // 创建活动
+      if (roles.indexOf(0) > -1) {
+        return true;
+      }
+      break;
+  }
+  return false;
+}
+
+module.exports.calcTeamListBtn = calcTeamListBtn;

@@ -1,0 +1,36 @@
+page {
+  background: #f6f6f6;
+}
+
+.home-breif-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 32rpx;
+  background-color: #fff;
+  margin-bottom: 32rpx;
+}
+
+.home-breif-box .breif-avatar-btn {
+  padding: 0;
+  width: auto;
+  margin: 0;
+}
+
+.home-breif-box .breif-avatar {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  background-color: #eee;
+  flex-shrink: 0;
+}
+
+.home-breif-box .breif-name {
+  font-size: 18px;
+  font-weight: bold;
+  flex-shrink: 0;
+  margin-right: 20rpx;
+}
+
+.home-breif-box .breif-desc {
+  font-size: 14px;
+}

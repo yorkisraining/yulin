@@ -1,0 +1,201 @@
+.swiper-tab {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  width: 100vw;
+}
+
+.tab-item {
+  width: calc(100% / 3);
+  text-align: center;
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #fff;
+}
+
+.tab-item.cur {
+  border-bottom-color: #13678B;
+}
+
+.team-items {
+  padding: 10px;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  height: 245px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .3);
+  margin: 16px 10px 0;
+}
+
+.team-items.no-act {
+  height: 100px;
+}
+
+.team-items:last-of-type {
+  margin-bottom: 10px;
+}
+
+.team-items-flex {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.team-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  transform: scale(1.5);
+  filter: blur(20px);
+}
+
+.blur-el {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  filter: blur(0.6px);
+  background-color: rgba(255, 255, 255, 3);
+}
+
+.team-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  margin-right: 10px;
+  border-radius: 16px;
+  background-color: #ccc;
+  flex-shrink: 0;
+}
+
+.team-name {
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.team-slogan {
+  font-size: 14px;
+  color: #fff;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.team-score {
+  font-size: 12px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.team-btn-groups {
+  display: flex;
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+.team-btn-groups button {
+  height: 24px;
+  line-height: 24px;
+  width: auto !important;
+  padding: 0 10px;
+  margin: 0;
+  font-size: 12px;
+  color: #fff;
+  font-weight: normal;
+  background-color: #45C4AF;
+  border-radius: 16px;
+}
+
+.team-btn-groups button+button {
+  margin-left: 10px;
+}
+
+.scroll-btn {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 16px;
+  bottom: 0;
+  opacity: .6;
+}
+
+.add-btn {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 16px;
+  bottom: 40px;
+  opacity: .6;
+}
+
+.scroll-view_H {
+  white-space: nowrap;
+  width: 100%;
+}
+
+.scroll-view-item_H {
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+}
+
+.act-items {
+  width: 90%;
+  display: inline-flex;
+  margin-right: 16px;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.05);
+  margin-bottom: 16px;
+}
+
+.act-bg {
+  width: 100px;
+  height: 135px;
+  background-color: #eee;
+  border-radius: 6px 0 0 6px;
+  flex-shrink: 0;
+}
+
+.act-msg {
+  padding: 10px 16px;
+}
+
+.act-name {
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-bottom: 10px;
+}
+
+.act-time,
+.act-address {
+  color: #666;
+  display: flex;
+}
+
+.act-time image,
+.act-address image {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+}

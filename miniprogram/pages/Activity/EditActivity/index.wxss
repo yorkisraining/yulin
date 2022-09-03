@@ -1,0 +1,26 @@
+/* pages/Activity/EditActivity/index.wxss */
+.submit-btn button {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.background-btn {
+  padding: 0;
+  margin: 0;
+  width: auto !important;
+}
+
+.background-image {
+  background-color: #eee;
+  width: 100px;
+  height: 135px;
+  float: left;
+}
+
+.weui-tiptips {
+  display: block;
+}
+
+.picker {
+  height: 24px;
+}

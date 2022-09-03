@@ -1,0 +1,54 @@
+.weui-search-bar {
+  background-color: transparent;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.act-list-box {
+  padding: 16px;
+}
+
+.act-items {
+  display: flex;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.05);
+  margin-bottom: 16px;
+}
+
+.act-bg {
+  width: 100px;
+  height: 135px;
+  background-color: #eee;
+  border-radius: 6px 0 0 6px;
+  flex-shrink: 0;
+}
+
+.act-msg {
+  padding: 10px 16px;
+}
+
+.act-name {
+  font-size: 16px;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-bottom: 10px;
+}
+
+.act-time,
+.act-address {
+  color: #666;
+  display: flex;
+}
+
+.act-time image,
+.act-address image {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+}

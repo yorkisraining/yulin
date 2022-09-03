@@ -1,0 +1,46 @@
+<!--pages/Activity/Detail/index.wxml-->
+<scroll-view scroll-y="true" class="act-detail-box">
+
+  <view class="act-detail-brief">
+    <image src="{{actInfo.backgroundUrl}}" class="brief-img" mode="aspectFill"></image>
+    <view>
+      <view class="brief-name">{{actInfo.name}}</view>
+    </view>
+  </view>
+
+  <view class="act-detail-msg">
+    <view class="msg-items">
+      <image class="msg-items-icon" src="../../../images/icons/icon_clock-w.png"></image>
+      <view class="msg-items-detail">时间：{{actInfo.startTime}}</view>
+    </view>
+    <view class="msg-items">
+      <image class="msg-items-icon" src="../../../images/icons/icon_address-w.png"></image>
+      <view class="msg-items-detail">地址：{{actInfo.address}}</view>
+    </view>
+    <view class="msg-items">
+      <image class="msg-items-icon" src="../../../images/icons/icon_notice-w.png"></image>
+      <view class="msg-items-detail">须知：退款政策/防疫说明 <image class="team-icon" src="../../../images/icons/icon_right-arrow.png"></image></view>
+    </view>
+  </view>
+
+  <view class="act-detail">
+    <view class="act-title">-活动详情-</view>
+    <view class="act-detail-msg">{{teamInfo.desc || '这是一个活动详情'}}</view>
+  </view>
+
+  <view class="act-team" bindtap="toTeamDetail">
+    <view class="act-title">-所在战队-</view>
+    <view class="act-team-item">
+      <image src="{{teamInfo.avatarUrl}}" class="team-avatar"></image>
+      <view>
+        <view class="team-name">{{teamInfo.name}}</view>
+        <view class="team-tags">
+          <view>成员：{{teamInfo.userList.length}}</view>
+          <view>活动：{{teamInfo.activityList.length}}</view>
+        </view>
+      </view>
+      <image class="team-icon" src="../../../images/icons/icon_right-arrow.png"></image>
+    </view>
+  </view>
+
+</scroll-view>
